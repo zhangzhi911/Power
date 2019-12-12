@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>san</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>StudentSservlet</display-name>
+    <servlet-name>StudentSservlet</servlet-name>
+    <servlet-class>com.controller.companyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentSservlet</servlet-name>
+    <url-pattern>/StudentSservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Company</display-name>
+    <servlet-name>Company</servlet-name>
+    <servlet-class>com.entity.Company</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Company</servlet-name>
+    <url-pattern>/Company</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>let</display-name>
+    <servlet-name>let</servlet-name>
+    <servlet-class>com.controller.let</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>let</servlet-name>
+    <url-pattern>/let</url-pattern>
+  </servlet-mapping>
+</web-app>
