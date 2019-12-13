@@ -13,5 +13,10 @@
 	<a href="<%=request.getContextPath()%>/IndexServlet?m=gongList">公司</a>
 	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheet2List">复杂的上报那个</a>
 
+
+	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheetUpBy&aid=1&qing=222">驳回</a>
+	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheetUpdate&aid=1&qing=222">修改</a>
+	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheetInsert&fid=444&fname=222">添加</a>
+
 </body>
 </html>

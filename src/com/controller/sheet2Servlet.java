@@ -28,10 +28,17 @@ public class sheet2Servlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String me = request.getParameter("m");
+		System.out.println(me);
 		if (me.trim() != null && !"".equals(me.trim())) {
 
 			if (me.equals("sheet2List")) {
 				sheetFind(request, response);
+			} else if (me.equals("sheetUpBy")) {
+				sheetUpBy(request, response);
+			} else if (me.equals("sheetUpdate")) {
+				sheetUpdate(request, response);
+			} else if (me.equals("sheetInsert")) {
+				sheetInsert(request, response);
 			}
 		}
 	}
@@ -42,25 +49,61 @@ public class sheet2Servlet extends HttpServlet {
 		System.out.println(list);
 		HttpSession session = request.getSession();
 		session.setAttribute("list", list);
-		// request.getRequestDispatcher("show.jsp").forward(request, response);
+		response.sendRedirect("sheetlist.jsp");
+	}
+
+	private void sheetUpBy(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String id = request.getParameter("aid");
+		int aid = Integer.parseInt(id);
+		String qing = request.getParameter("qing");
+		sheet2 sh = new sheet2();
+		sh.setAid(aid);
+		sh.setQing(qing);
+		try {
+			s.updateBy(sh);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		response.sendRedirect("sheetlist.jsp");
+	}
+
+	private void sheetUpdate(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+		String id = request.getParameter("aid");
+		int aid = Integer.parseInt(id);
+		String qing = request.getParameter("qing");
+		
+		
+		sheet2 sh = new sheet2();
+		sh.setAid(aid);
+		sh.setQing(qing);
+		sh.setZhuan("¿ªÊ¼");
+		
+		
+		try {
+			s.updateBy(sh);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		response.sendRedirect("sheetlist.jsp");
+	}
+
+	private void sheetInsert(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		String id = request.getParameter("fid");
+		int fid = Integer.parseInt(id);
+		String fname = request.getParameter("fname");
+		sheet2 sh = new sheet2();
+		sh.setFid(fid);
+		sh.setFname(fname);
+			
+		try {
+			s.insertsheet(sh);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		response.sendRedirect("sheetlist.jsp");
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,292 +1,151 @@
 package com.entity;
 
 public class sheet2 {
-    private String a;
+    private Integer aid;
 
-    private String b;
+    private Integer fid;
 
-    private String c;
+    private String fname;
 
-    private String d;
+    private String pnum;
 
-    private String e;
+    private String gong;
 
-    private String f;
+    private String gprice;
 
-    private String g;
+    private String gdian;
 
-    private String h;
+    private String gsav;
 
-    private String i;
+    private String maxprice;
 
-    private String j;
+    private String minprice;
 
-    private String k;
+    private String psave;
 
-    private String l;
+    private String zprice;
 
-    private String m;
+    private String zhuan;
 
-    private String n;
+    private String qing;
 
-    private String o;
+    public Integer getAid() {
+        return aid;
+    }
 
-    private String p;
+    public void setAid(Integer aid) {
+        this.aid = aid;
+    }
 
-    private String q;
+    public Integer getFid() {
+        return fid;
+    }
 
-    private String r;
+    public void setFid(Integer fid) {
+        this.fid = fid;
+    }
 
-    private String s;
+    public String getFname() {
+        return fname;
+    }
 
-    private String t;
-
-    private String u;
-
-    private String v;
-
-    private String w;
-
-    private String x;
-
-    private String y;
-
-    private String z;
-
-    private String aa;
-
-    private String ab;
-
-	public String getA() {
-		return a;
-	}
-
-	public void setA(String a) {
-		this.a = a;
-	}
-
-	public String getB() {
-		return b;
-	}
-
-	public void setB(String b) {
-		this.b = b;
-	}
-
-	public String getC() {
-		return c;
-	}
-
-	public void setC(String c) {
-		this.c = c;
-	}
-
-	public String getD() {
-		return d;
-	}
-
-	public void setD(String d) {
-		this.d = d;
-	}
-
-	public String getE() {
-		return e;
-	}
-
-	public void setE(String e) {
-		this.e = e;
-	}
-
-	public String getF() {
-		return f;
-	}
-
-	public void setF(String f) {
-		this.f = f;
-	}
-
-	public String getG() {
-		return g;
-	}
-
-	public void setG(String g) {
-		this.g = g;
-	}
-
-	public String getH() {
-		return h;
-	}
-
-	public void setH(String h) {
-		this.h = h;
-	}
-
-	public String getI() {
-		return i;
-	}
-
-	public void setI(String i) {
-		this.i = i;
-	}
-
-	public String getJ() {
-		return j;
-	}
-
-	public void setJ(String j) {
-		this.j = j;
-	}
-
-	public String getK() {
-		return k;
-	}
-
-	public void setK(String k) {
-		this.k = k;
-	}
-
-	public String getL() {
-		return l;
-	}
-
-	public void setL(String l) {
-		this.l = l;
-	}
-
-	public String getM() {
-		return m;
-	}
-
-	public void setM(String m) {
-		this.m = m;
-	}
-
-	public String getN() {
-		return n;
-	}
-
-	public void setN(String n) {
-		this.n = n;
-	}
-
-	public String getO() {
-		return o;
-	}
-
-	public void setO(String o) {
-		this.o = o;
-	}
-
-	public String getP() {
-		return p;
-	}
-
-	public void setP(String p) {
-		this.p = p;
-	}
-
-	public String getQ() {
-		return q;
-	}
-
-	public void setQ(String q) {
-		this.q = q;
-	}
-
-	public String getR() {
-		return r;
-	}
-
-	public void setR(String r) {
-		this.r = r;
-	}
-
-	public String getS() {
-		return s;
-	}
-
-	public void setS(String s) {
-		this.s = s;
-	}
-
-	public String getT() {
-		return t;
-	}
-
-	public void setT(String t) {
-		this.t = t;
-	}
-
-	public String getU() {
-		return u;
-	}
-
-	public void setU(String u) {
-		this.u = u;
-	}
-
-	public String getV() {
-		return v;
-	}
-
-	public void setV(String v) {
-		this.v = v;
-	}
-
-	public String getW() {
-		return w;
-	}
-
-	public void setW(String w) {
-		this.w = w;
-	}
-
-	public String getX() {
-		return x;
-	}
-
-	public void setX(String x) {
-		this.x = x;
-	}
-
-	public String getY() {
-		return y;
-	}
-
-	public void setY(String y) {
-		this.y = y;
-	}
-
-	public String getZ() {
-		return z;
-	}
-
-	public void setZ(String z) {
-		this.z = z;
-	}
-
-	public String getAa() {
-		return aa;
-	}
-
-	public void setAa(String aa) {
-		this.aa = aa;
-	}
-
-	public String getAb() {
-		return ab;
-	}
-
-	public void setAb(String ab) {
-		this.ab = ab;
-	}
-
-	@Override
+    @Override
 	public String toString() {
-		return "sheet2 [a=" + a + ", b=" + b + ", c=" + c + ", d=" + d + ", e=" + e + ", f=" + f + ", g=" + g + ", h="
-				+ h + ", i=" + i + ", j=" + j + ", k=" + k + ", l=" + l + ", m=" + m + ", n=" + n + ", o=" + o + ", p="
-				+ p + ", q=" + q + ", r=" + r + ", s=" + s + ", t=" + t + ", u=" + u + ", v=" + v + ", w=" + w + ", x="
-				+ x + ", y=" + y + ", z=" + z + ", aa=" + aa + ", ab=" + ab + "]";
+		return "sheet2 [aid=" + aid + ", fid=" + fid + ", fname=" + fname + ", pnum=" + pnum + ", gong=" + gong
+				+ ", gprice=" + gprice + ", gdian=" + gdian + ", gsav=" + gsav + ", maxprice=" + maxprice
+				+ ", minprice=" + minprice + ", psave=" + psave + ", zprice=" + zprice + ", zhuan=" + zhuan + ", qing="
+				+ qing + "]";
 	}
-	
+
+	public void setFname(String fname) {
+        this.fname = fname == null ? null : fname.trim();
+    }
+
+    public String getPnum() {
+        return pnum;
+    }
+
+    public void setPnum(String pnum) {
+        this.pnum = pnum == null ? null : pnum.trim();
+    }
+
+    public String getGong() {
+        return gong;
+    }
+
+    public void setGong(String gong) {
+        this.gong = gong == null ? null : gong.trim();
+    }
+
+    public String getGprice() {
+        return gprice;
+    }
+
+    public void setGprice(String gprice) {
+        this.gprice = gprice == null ? null : gprice.trim();
+    }
+
+    public String getGdian() {
+        return gdian;
+    }
+
+    public void setGdian(String gdian) {
+        this.gdian = gdian == null ? null : gdian.trim();
+    }
+
+    public String getGsav() {
+        return gsav;
+    }
+
+    public void setGsav(String gsav) {
+        this.gsav = gsav == null ? null : gsav.trim();
+    }
+
+    public String getMaxprice() {
+        return maxprice;
+    }
+
+    public void setMaxprice(String maxprice) {
+        this.maxprice = maxprice == null ? null : maxprice.trim();
+    }
+
+    public String getMinprice() {
+        return minprice;
+    }
+
+    public void setMinprice(String minprice) {
+        this.minprice = minprice == null ? null : minprice.trim();
+    }
+
+    public String getPsave() {
+        return psave;
+    }
+
+    public void setPsave(String psave) {
+        this.psave = psave == null ? null : psave.trim();
+    }
+
+    public String getZprice() {
+        return zprice;
+    }
+
+    public void setZprice(String zprice) {
+        this.zprice = zprice == null ? null : zprice.trim();
+    }
+
+    public String getZhuan() {
+        return zhuan;
+    }
+
+    public void setZhuan(String zhuan) {
+        this.zhuan = zhuan == null ? null : zhuan.trim();
+    }
+
+    public String getQing() {
+        return qing;
+    }
+
+    public void setQing(String qing) {
+        this.qing = qing == null ? null : qing.trim();
+    }
 }
