@@ -39,6 +39,8 @@ public class sheet2Servlet extends HttpServlet {
 				sheetUpdate(request, response);
 			} else if (me.equals("sheetInsert")) {
 				sheetInsert(request, response);
+			} else if (me.equals("sheet2Delete")) {
+				sheet2Delete(request, response);
 			}
 		}
 	}
@@ -72,17 +74,39 @@ public class sheet2Servlet extends HttpServlet {
 
 		String id = request.getParameter("aid");
 		int aid = Integer.parseInt(id);
+		String ffid = request.getParameter("fid");
+		int fid = Integer.parseInt(ffid);
+		String fname = request.getParameter("fname");
+		String pnum = request.getParameter("pnum");
+		String gong = request.getParameter("gong");
+		String gprice = request.getParameter("gprice");
+		String gdian = request.getParameter("gdian");
+		String gsav = request.getParameter("gsav");
+		String maxprice = request.getParameter("maxprice");
+		String minprice = request.getParameter("minprice");
+		String psave = request.getParameter("psave");
+		String zprice = request.getParameter("zprice");
+		String zhuan = request.getParameter("zhuan");
 		String qing = request.getParameter("qing");
-		
-		
+
 		sheet2 sh = new sheet2();
 		sh.setAid(aid);
+		sh.setFid(fid);
+		sh.setFname(fname);
+		sh.setPnum(pnum);
+		sh.setGong(gong);
+		sh.setGprice(gprice);
+		sh.setGdian(gdian);
+		sh.setGsav(gsav);
+		sh.setMaxprice(maxprice);
+		sh.setMinprice(minprice);
+		sh.setPsave(psave);
+		sh.setZprice(zprice);
+		sh.setZhuan(zhuan);
 		sh.setQing(qing);
-		sh.setZhuan("¿ªÊ¼");
-		
-		
+System.out.println(sh);
 		try {
-			s.updateBy(sh);
+			s.updatesheet(sh);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -90,16 +114,56 @@ public class sheet2Servlet extends HttpServlet {
 	}
 
 	private void sheetInsert(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		
-		String id = request.getParameter("fid");
-		int fid = Integer.parseInt(id);
+
+		String ffid = request.getParameter("fid");
+		int fid = Integer.parseInt(ffid);
 		String fname = request.getParameter("fname");
+		String pnum = request.getParameter("pnum");
+		String gong = request.getParameter("gong");
+		String gprice = request.getParameter("gprice");
+		String gdian = request.getParameter("gdian");
+		String gsav = request.getParameter("gsav");
+		String maxprice = request.getParameter("maxprice");
+		String minprice = request.getParameter("minprice");
+		String psave = request.getParameter("psave");
+		String zprice = request.getParameter("zprice");
+		String zhuan = request.getParameter("zhuan");
+		String qing = request.getParameter("qing");
+
 		sheet2 sh = new sheet2();
 		sh.setFid(fid);
 		sh.setFname(fname);
-			
+		sh.setPnum(pnum);
+		sh.setGong(gong);
+		sh.setGprice(gprice);
+		sh.setGdian(gdian);
+		sh.setGsav(gsav);
+		sh.setMaxprice(maxprice);
+		sh.setMinprice(minprice);
+		sh.setPsave(psave);
+		sh.setZprice(zprice);
+		sh.setZhuan(zhuan);
+		sh.setQing(qing);
+
+System.out.println(sh);
 		try {
 			s.insertsheet(sh);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		response.sendRedirect("sheetlist.jsp");
+	}
+
+	private void sheet2Delete(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+		String id = request.getParameter("aid");
+		int aid = Integer.parseInt(id);
+		sheet2 sh = new sheet2();
+		sh.setAid(aid);
+
+System.out.println(sh);
+		try {
+			s.deletesheet2(sh);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

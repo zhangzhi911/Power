@@ -17,7 +17,12 @@ public class power {
         this.pid = pid;
     }
 
-    public String getPname() {
+    @Override
+	public String toString() {
+		return "power [pid=" + pid + ", pname=" + pname + ", pprice=" + pprice + "]";
+	}
+
+	public String getPname() {
         return pname;
     }
 

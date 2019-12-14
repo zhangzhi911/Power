@@ -3,6 +3,7 @@ package com.dao;
 import java.util.List;
 
 import com.entity.Company;
+import com.entity.sheet2;
 import com.uti.JdbcUtil;
 
 public class CompanyMapper {
@@ -20,7 +21,5 @@ public class CompanyMapper {
 		return JdbcUtil.getList(Company.class, sql);
 	}
 
-	
-	
-	
+
 }

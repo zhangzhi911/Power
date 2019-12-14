@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.dao.sheet2Mapper;
 import com.entity.sheet2;
+import com.uti.JdbcUtil;
 
 public class sheet2Service {
 
@@ -30,5 +31,12 @@ public class sheet2Service {
 	public int insertsheet(sheet2 s) {
 
 		return c.insertsheet(s);
+	}
+
+	public int deletesheet2(sheet2 s) {
+
+		String sql = "DELETE FROM `11_18brand`.`sheet3` WHERE `aid` =" + s.getAid();
+		JdbcUtil.executeTran(sql);
+		return 1;
 	}
 }

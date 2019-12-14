@@ -14,9 +14,10 @@
 	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheet2List">复杂的上报那个</a>
 
 
+	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheet2Delete&aid=1&qing=222">删除</a>
 	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheetUpBy&aid=1&qing=222">驳回</a>
-	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheetUpdate&aid=1&qing=222">修改</a>
-	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheetInsert&fid=444&fname=222">添加</a>
+	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheetInsert&aid=1&fid=444&fname=222&pnum=222&gong=222&gprice=222&gdian=66&gsav=555&maxprice=25&minprice=5555&psave=555&zprice=55&zhuan=555&qing=5555">添加</a>                                             
+	<a href="<%=request.getContextPath()%>/sheet2Servlet?m=sheetUpdate&aid=1&fid=444&fname=222&pnum=222&gong=222&gprice=222&gdian=66&gsav=555&maxprice=25&minprice=5555&psave=555&zprice=55&zhuan=555&qing=5555">修改</a>                                             
 
 </body>
 </html>

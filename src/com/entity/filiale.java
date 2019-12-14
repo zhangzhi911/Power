@@ -1,6 +1,7 @@
 package com.entity;
 
 public class filiale {
+//	¹«Ë¾
     private Integer fid;
 
     private String fname;
@@ -17,7 +18,12 @@ public class filiale {
         this.fid = fid;
     }
 
-    public String getFname() {
+    @Override
+	public String toString() {
+		return "filiale [fid=" + fid + ", fname=" + fname + ", fprice=" + fprice + ", fstatus=" + fstatus + "]";
+	}
+
+	public String getFname() {
         return fname;
     }
 

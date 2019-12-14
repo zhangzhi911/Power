@@ -30,6 +30,11 @@ public class Company {
 	public void setCname(String cname) {
 		this.cname = cname;
 	}
+	@Override
+	public String toString() {
+		return "Company [cid=" + cid + ", fid=" + fid + ", cname=" + cname + ", fname=" + fname + ", ctotal=" + ctotal
+				+ ", price=" + price + "]";
+	}
 	public String getFname() {
 		return fname;
 	}
